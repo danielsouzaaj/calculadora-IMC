@@ -1,0 +1,108 @@
+:root {
+    --clr-white: #FFFFFF;
+    --clr-blue-light: #676F9D;
+    --clr-blue-medium: #424769;
+    --clr-blue-dark: #2D3250;
+    --clr-brown: #F9B17A;
+    --clr-red: #F20505;
+
+    --ff-default: "Roboto", sans-serif;
+
+    --fw-400: 400;
+    --fw-700: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--clr-blue-dark);
+    color: var(--clr-white);
+    font-family: var(--ff-default);
+    font-size: 1rem;
+    font-weight: var(--fw-400);
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 32px;
+}
+
+.wrapper {
+    background-color: var(--clr-blue-medium);
+    max-width: 235px;
+    padding: 24px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: var(--fw-700);
+}
+
+#formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+input {
+    background-color: var(--clr-blue-light);
+    border: none;
+    border-radius: 4px;
+}
+
+input[type="text"] {
+    min-height: 2rem;
+    font-size: 1rem;
+    color: var(--clr-white);
+    padding: 0 8px;
+    margin-bottom: 20px;
+}
+
+input::placeholder {
+    font-size: 1rem;
+    color: var(--clr-white);
+    padding: 0 8px;
+}
+
+input[type="submit"] {
+    background-color: var(--clr-brown);
+    cursor: pointer;
+    padding: 12px;
+    color: var(--clr-blue-dark);
+    font-weight: var(--fw-700);
+    font-size: 1rem;
+}
+
+.result {
+    margin-top: 16px;
+}
+
+.error {
+    background-color: var(--clr-red);
+    border-radius: 8px 8px 0 0;
+    padding: 4px;
+    position: absolute;
+    text-align: center;
+    top: -16px;
+    left: 0;
+    right: 0;
+}
+
+.off {
+    display: none;
+}
+
+.on {
+    display: block;
+}
